@@ -55,48 +55,48 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 
 const images = [
   {
-    url: 'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400',
-    title: 'Snorkeling',
+    url: 'https://img.freepik.com/fotos-gratis/alto-angulo-de-nadador-masculino-na-piscina-de-agua_23-2148687635.jpg?size=626&ext=jpg&ga=GA1.2.1435570119.1655761556',
+    title: 'Natação',
     width: '40%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400',
-    title: 'Massage',
+    url: 'https://img.freepik.com/fotos-gratis/acao-do-jogador-de-futebol-no-estadio_1150-14598.jpg?size=626&ext=jpg&ga=GA1.2.1435570119.1655761556',
+    title: 'Fut Campo',
     width: '20%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400',
-    title: 'Hiking',
+    url: 'https://img.freepik.com/fotos-gratis/mulher-com-bola-de-basquete_23-2148435381.jpg?size=338&ext=jpg&ga=GA1.2.1435570119.1655761556',
+    title: 'Basquete',
     width: '40%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400',
-    title: 'Tour',
+    url: 'https://img.freepik.com/fotos-gratis/jovem-homem-caucasiano-jogador-de-futebol-masculino-treinando-isolado-na-parede-rosa-azul-gradiente-com-luz-de-neon_155003-38559.jpg?size=626&ext=jpg&ga=GA1.2.1435570119.1655761556',
+    title: 'Futsal',
     width: '38%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400',
-    title: 'Gastronomy',
+    url: 'https://img.freepik.com/fotos-gratis/jovem-jogadora-de-volei-isolada-na-parede-branca-mulher-em-equipamentos-de-esporte-e-sapatos-ou-tenis-treinando-e-praticando-conceito-de-esporte-estilo-de-vida-saudavel-movimento-e-movimento_155003-28111.jpg?size=626&ext=jpg&ga=GA1.2.1435570119.1655761556',
+    title: 'Vôlei',
     width: '38%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400',
-    title: 'Shopping',
+    url: 'https://img.freepik.com/fotos-gratis/tenis-de-mesa-ou-ping-pong_1232-2658.jpg?size=626&ext=jpg&ga=GA1.2.1435570119.1655761556',
+    title: 'Tênis de Mesa',
     width: '24%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400',
-    title: 'Walking',
+    url: 'https://img.freepik.com/fotos-gratis/fas-de-torcedor-torcendo-com-confetes-assistindo-evento-de-futebol-no-estadio_166273-290.jpg?size=626&ext=jpg&ga=GA1.2.1435570119.1655761556',
+    title: 'Torcida',
     width: '40%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400',
-    title: 'Fitness',
+    url: 'https://conteudo.imguol.com.br/c/esporte/bd/2021/06/16/equipe-da-noruega-no-campeonato-mundial-de-cheerleading-1623858213855_v2_900x506.jpg.webp',
+    title: 'Cheers',
     width: '20%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400',
-    title: 'Reading',
+    url: 'https://1.bp.blogspot.com/-senoOf2EYQc/X8lta9qW_gI/AAAAAAAAJC4/QrTGOrdryPYzDiRqV6lQInwMsnJDYy4rgCLcBGAsYHQ/w640-h322/russia%2Behf%2Beuro.jpg',
+    title: 'Handebol',
     width: '40%',
   },
 ];
@@ -105,7 +105,7 @@ export default function ProductCategories() {
   return (
     <Container component="section" sx={{ mt: 8, mb: 4 }}>
       <Typography variant="h4" marked="center" align="center" component="h2">
-        For all tastes and all desires
+        Um amor que não se explica
       </Typography>
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
         {images.map((image) => (

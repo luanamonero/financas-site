@@ -1,14 +1,14 @@
-import * as React from 'react';
+import * as React from "react";
 
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
-import Typography from '../components/Typography';
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Typography from "../components/Typography";
 
 const item = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
   px: 5,
 };
 
@@ -16,34 +16,34 @@ function ProductValues() {
   return (
     <Box
       component="section"
-      sx={{ display: 'flex', overflow: 'hidden', bgcolor: 'secondary.light' }}
+      sx={{ display: "flex", overflow: "hidden", bgcolor: "secondary.light" }}
     >
-      <Container sx={{ mt: 15, mb: 30, display: 'flex', position: 'relative' }}>
+      <Container sx={{ mt: 15, mb: 30, display: "flex", position: "relative" }}>
         <Box
           component="img"
           src="/static/themes/onepirate/productCurvyLines.png"
           alt="curvy lines"
-          sx={{ pointerEvents: 'none', position: 'absolute', top: -180 }}
+          sx={{ pointerEvents: "none", position: "absolute", top: -180 }}
         />
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <Box sx={item}>
               <Box
                 component="img"
-                src="/static/themes/onepirate/productValues1.svg"
-                alt="suitcase"
-                sx={{ height: 55 }}
+                src="https://svgsilh.com/svg/150163.svg"
+                alt="esportes"
+                sx={{ height: 80 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                The best luxury hotels
+                Muito esporte
               </Typography>
               <Typography variant="h5">
                 {
-                  'From the latest trendy boutique hotel to the iconic palace with XXL pool'
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
                 }
 
                 {
-                  ', go for a mini-vacation just a few subway stops away from your home.'
+                  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
                 }
               </Typography>
             </Box>
@@ -52,19 +52,21 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component="img"
-                src="/static/themes/onepirate/productValues2.svg"
+                src="https://svgsilh.com/svg/1458869.svg"
                 alt="graph"
-                sx={{ height: 55 }}
+                sx={{ height: 80 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                New experiences
+                Os melhores eventos
               </Typography>
               <Typography variant="h5">
                 {
-                  'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
                 }
 
-                {'your Sundays will not be alike.'}
+                {
+                  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                }
               </Typography>
             </Box>
           </Grid>
@@ -72,16 +74,21 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component="img"
-                src="/static/themes/onepirate/productValues3.svg"
+                src="https://svgsilh.com/svg/1919561.svg"
                 alt="clock"
-                sx={{ height: 55 }}
+                sx={{ height: 80 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                Exclusive rates
+                Viagens inesquecíveis
               </Typography>
               <Typography variant="h5">
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+                {
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+                }
+
+                {
+                  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                }
               </Typography>
             </Box>
           </Grid>
