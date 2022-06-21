@@ -38,10 +38,10 @@ export default function ProductHero() {
         href="/premium-themes/onepirate/sign-up/"
         sx={{ minWidth: 200 }}
       >
-        Registrar
+        Entrar
       </Button>
       <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        qualquer outra mini frase
+        Ainda não tenho cadastro
       </Typography>
     </ProductHeroLayout>
   );
