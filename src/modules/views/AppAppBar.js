@@ -5,7 +5,9 @@ import AppBar from "../components/AppBar";
 import Toolbar from "../components/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Drawer } from "@mui/material";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Fade from "@mui/material/Fade";
 
 const rightLink = {
   fontSize: 16,
@@ -16,10 +18,19 @@ const rightLink = {
 function AppAppBar() {
   const [state, setState] = React.useState({
     mobileView: false,
-    drawerOpen: false,
   });
 
-  const { mobileView, drawerOpen } = state;
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const { mobileView } = state;
 
   React.useEffect(() => {
     const setResponsiveness = () => {
@@ -38,35 +49,58 @@ function AppAppBar() {
   }, []);
 
   function displayMobile() {
-    const handleDrawerOpen = () =>
-      setState((prevState) => ({ ...prevState, drawerOpen: true }));
-    const handleDrawerClose = () =>
-      setState((prevState) => ({ ...prevState, drawerOpen: false }));
     return (
-      <Toolbar sx={{ justifyContent: "space-around" }} >
+      <Toolbar sx={{ justifyContent: "space-around", color: "brand.red" }}>
         <Link
           variant="h6"
           underline="none"
           color="inherit"
           href="/premium-themes/onepirate/"
-          sx={{ fontSize: 24}}
+          sx={{ fontSize: 24 }}
         >
           {"finanças uerj"}
         </Link>
         <IconButton
-          {...{
-            sx: { left:'10px', color: 'brand.yellow'},
-            size: "large",
-            color: "inherit",
-            "aria-label": "menu",
-            "aria-haspopup": "true",
-            onClick: handleDrawerOpen,
-          }}
+          aria-label="more"
+          id="long-button"
+          aria-controls={open ? 'long-menu' : undefined}
+          aria-expanded={open ? 'true' : undefined}
+          aria-haspopup="true"
+          onClick={handleClick}
+          sx={{color: "brand.yellow"}}
         >
           <MenuIcon />
         </IconButton>
-        
-      
+        <Menu
+          id="long-menu"
+          MenuListProps={{
+            "aria-labelledby": "long-button",
+          }}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          TransitionComponent={Fade}
+        >
+          <MenuItem onClick={handleClose}>
+            <Link
+              variant="h6"
+              underline="none"
+              href="/premium-themes/onepirate/sign-in/"
+            >
+              {"Instagram"}
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <Link
+              variant="h6"
+              underline="none"
+              href="https://www.cheersshop.com.br/atl%C3%A9tica-ime-uerj~387"
+              target="_blank"
+            >
+              {"Lojinha"}
+            </Link>
+          </MenuItem>
+        </Menu>
       </Toolbar>
     );
   }
