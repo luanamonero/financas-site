@@ -41,10 +41,10 @@ function ProductCTA() {
             <Box
               component="form"
               onSubmit={handleSubmit}
-              sx={{ maxWidth: 400 }}
+              sx={{ maxWidth: 450 }}
             >
               <Typography variant="h3" component="h3" gutterBottom>
-                Quer saber mais sobre treinos?
+                Quer fazer parte da atlética?
               </Typography>
               <Typography variant="h5">
                 Deixe seu telefone que entraremos em contato
