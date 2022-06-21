@@ -27,21 +27,21 @@ function ProductCTA() {
             sx={{
               display: 'flex',
               justifyContent: 'center',
-              bgcolor: 'warning.main',
+              bgcolor: 'brand.yellow',
               py: 8,
               px: 3,
             }}
           >
             <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
               <Typography variant="h2" component="h2" gutterBottom>
-                Receive offers
+                Quer saber mais sobre treinos?
               </Typography>
               <Typography variant="h5">
-                Taste the holidays of the everyday close to home.
+                Deixe seu telefone que entraremos em contato
               </Typography>
               <TextField
                 noBorder
-                placeholder="Your email"
+                placeholder="(xx) xxxxx-xxxx"
                 variant="standard"
                 sx={{ width: '100%', mt: 3, mb: 2 }}
               />
@@ -51,7 +51,7 @@ function ProductCTA() {
                 variant="contained"
                 sx={{ width: '100%' }}
               >
-                Keep me updated
+                Enviar 
               </Button>
             </Box>
           </Box>
@@ -63,19 +63,8 @@ function ProductCTA() {
           sx={{ display: { md: 'block', xs: 'none' }, position: 'relative' }}
         >
           <Box
-            sx={{
-              position: 'absolute',
-              top: -67,
-              left: -67,
-              right: 0,
-              bottom: 0,
-              width: '100%',
-              background: 'url(/static/themes/onepirate/productCTAImageDots.png)',
-            }}
-          />
-          <Box
             component="img"
-            src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750"
+            src="https://blog.umais.com.br/wp-content/uploads/2020/06/original-df5de95b4f90b178b6f31f0d1a621883-scaled.jpeg"
             alt="call to action"
             sx={{
               position: 'absolute',
@@ -92,7 +81,7 @@ function ProductCTA() {
       <Snackbar
         open={open}
         closeFunc={handleClose}
-        message="We will send you our best offers, once a week."
+        message="Agradecemos o interesse em fazer parte da família :)"
       />
     </Container>
   );

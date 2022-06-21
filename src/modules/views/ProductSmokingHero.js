@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function ProductSmokingHero() {
   return (
@@ -20,18 +21,17 @@ function ProductSmokingHero() {
         }}
       >
         <Typography variant="h4" component="span">
-          Got any questions? Need help?
+          Ficou com alguma dúvida?
         </Typography>
       </Button>
       <Typography variant="subtitle1" sx={{ my: 3 }}>
-        We are here to help. Get in touch!
+        Entre em contato com nosso time que iremos te auxilar da melhor forma!
       </Typography>
       <Box
-        component="img"
-        src="/static/themes/onepirate/producBuoy.svg"
-        alt="buoy"
         sx={{ width: 60 }}
-      />
+      >
+        <WhatsAppIcon fontSize="large"/>
+      </Box>
     </Container>
   );
 }

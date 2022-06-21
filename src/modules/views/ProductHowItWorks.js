@@ -5,6 +5,9 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import SafetyDividerIcon from '@mui/icons-material/SafetyDivider';
+import AddCardIcon from '@mui/icons-material/AddCard';
 
 const item = {
   display: 'flex',
@@ -16,7 +19,7 @@ const item = {
 const number = {
   fontSize: 24,
   fontFamily: 'default',
-  color: 'secondary.main',
+  color: 'brand.yellow',
   fontWeight: 'medium',
 };
 
@@ -53,7 +56,7 @@ function ProductHowItWorks() {
           }}
         />
         <Typography variant="h4" marked="center" component="h2" sx={{ mb: 14 }}>
-          Como fazer parte?
+          quer se tornar nosso sócio?
         </Typography>
         <div>
           <Grid container spacing={5}>
@@ -61,13 +64,12 @@ function ProductHowItWorks() {
               <Box sx={item}>
                 <Box sx={number}>1.</Box>
                 <Box
-                  component="img"
-                  src="/static/themes/onepirate/productHowItWorks1.svg"
-                  alt="suitcase"
                   sx={image}
-                />
+                >
+                  <SafetyDividerIcon fontSize="large"/>
+                </Box>
                 <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
+                  Entre no site do nosso parceiro.
                 </Typography>
               </Box>
             </Grid>
@@ -75,14 +77,12 @@ function ProductHowItWorks() {
               <Box sx={item}>
                 <Box sx={number}>2.</Box>
                 <Box
-                  component="img"
-                  src="/static/themes/onepirate/productHowItWorks2.svg"
-                  alt="graph"
                   sx={image}
-                />
+                >
+                  <AddCardIcon fontSize="large"/>
+                </Box>
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited quantities, so
-                  be quick.
+                Escolha o melhor pacote.
                 </Typography>
               </Box>
             </Grid>
@@ -90,14 +90,13 @@ function ProductHowItWorks() {
               <Box sx={item}>
                 <Box sx={number}>3.</Box>
                 <Box
-                  component="img"
-                  src="/static/themes/onepirate/productHowItWorks3.svg"
-                  alt="clock"
                   sx={image}
-                />
+                >
+                  <CardGiftcardIcon fontSize="large"/>
+                </Box>
                 <Typography variant="h5" align="center">
-                  {'New offers every week. New experiences, new surprises. '}
-                  {'Your Sundays will no longer be alike.'}
+                  {'Aproveite as vantagens!'}
+                  {' São dezenas de descontos em produtos,viagens e estabelecimentos.'}
                 </Typography>
               </Box>
             </Grid>
@@ -108,10 +107,11 @@ function ProductHowItWorks() {
           size="large"
           variant="contained"
           component="a"
-          href="/premium-themes/onepirate/sign-up/"
+          href="https://www.umais.com.br/"
+          target="_blank"
           sx={{ mt: 8 }}
         >
-          Get started
+          ASSINAR
         </Button>
       </Container>
     </Box>

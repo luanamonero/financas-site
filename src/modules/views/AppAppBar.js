@@ -38,7 +38,8 @@ function AppAppBar() {
             <Link
               variant="h6"
               underline="none"
-              href="/premium-themes/onepirate/sign-up/"
+              href="https://www.cheersshop.com.br/atl%C3%A9tica-ime-uerj~387"
+              target="_blank"
               sx={{ ...rightLink, color: 'brand.yellow' }}
             >
               {'Lojinha'}
