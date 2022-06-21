@@ -24,7 +24,7 @@ function ProductSmokingHero() {
           Ficou com alguma dúvida?
         </Typography>
       </Button>
-      <Typography variant="subtitle1" sx={{ my: 3, align: 'center' }}>
+      <Typography variant="subtitle1" sx={{ my: 3, textAlign: 'center' }}>
         Entre em contato com nosso time que iremos te auxilar da melhor forma!
       </Typography>
       <Box
