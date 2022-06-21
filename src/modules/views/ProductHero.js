@@ -1,3 +1,4 @@
+import { Link } from '@mui/material';
 import * as React from 'react';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
@@ -40,9 +41,9 @@ export default function ProductHero() {
       >
         Entrar
       </Button>
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
+      <Link variant="body2" color="inherit" sx={{ mt: 2 }} href="/cadastrar">
         Ainda não tenho cadastro
-      </Typography>
+      </Link>
     </ProductHeroLayout>
   );
 }
