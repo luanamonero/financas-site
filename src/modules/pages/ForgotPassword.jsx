@@ -1,15 +1,13 @@
 import * as React from 'react';
 import { Field, Form, FormSpy } from 'react-final-form';
 import Box from '@mui/material/Box';
-import Typography from './modules/components/Typography';
-import AppFooter from './modules/views/AppFooter';
-import AppAppBar from './modules/views/AppAppBar';
-import AppForm from './modules/views/AppForm';
-import { email, required } from './modules/form/validation';
-import RFTextField from './modules/form/RFTextField';
-import FormButton from './modules/form/FormButton';
-import FormFeedback from './modules/form/FormFeedback';
-import withRoot from './modules/withRoot';
+import Typography from '../components/Typography';
+import AppAppBar from '../views/AppAppBar';
+import AppForm from '../views/AppForm';
+import { email, required } from '../form/validation';
+import RFTextField from '../form/RFTextField';
+import FormButton from '../form/FormButton';
+import FormFeedback from '../form/FormFeedback';
 
 function ForgotPassword() {
   const [sent, setSent] = React.useState(false);
@@ -32,18 +30,18 @@ function ForgotPassword() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <AppAppBar />
       <AppForm>
-        <React.Fragment>
+        <section>
           <Typography variant="h3" gutterBottom marked="center" align="center">
-            Forgot your password?
+            Esqueceu sua senha?
           </Typography>
           <Typography variant="body2" align="center">
-            {"Enter your email address below and we'll " +
-              'send you a link to reset your password.'}
+            {"Digite seu email " +
+              'que mandaremos um link para resetar a senha.'}
           </Typography>
-        </React.Fragment>
+        </section>
         <Form
           onSubmit={handleSubmit}
           subscription={{ submitting: true }}
@@ -79,15 +77,14 @@ function ForgotPassword() {
                 color="secondary"
                 fullWidth
               >
-                {submitting || sent ? 'In progress…' : 'Send reset link'}
+                {submitting || sent ? 'Carregando…' : 'Resetar'}
               </FormButton>
             </Box>
           )}
         </Form>
       </AppForm>
-      <AppFooter />
-    </React.Fragment>
+    </>
   );
 }
 
-export default withRoot(ForgotPassword);
+export default ForgotPassword;

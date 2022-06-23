@@ -1,23 +1,21 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 import { Field, Form, FormSpy } from 'react-final-form';
-import Typography from './modules/components/Typography';
-import AppFooter from './modules/views/AppFooter';
-import AppAppBar from './modules/views/AppAppBar';
-import AppForm from './modules/views/AppForm';
-import { email, required } from './modules/form/validation';
-import RFTextField from './modules/form/RFTextField';
-import FormButton from './modules/form/FormButton';
-import FormFeedback from './modules/form/FormFeedback';
-import withRoot from './modules/withRoot';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import Typography from '../components/Typography';
+import AppAppBar from '../views/AppAppBar';
+import AppForm from '../views/AppForm';
+import { email, required } from '../form/validation';
+import RFTextField from '../form/RFTextField';
+import FormButton from '../form/FormButton';
+import FormFeedback from '../form/FormFeedback';
 
-function SignUp() {
+
+function SignIn() {
   const [sent, setSent] = React.useState(false);
 
   const validate = (values) => {
-    const errors = required(['firstName', 'lastName', 'email', 'password'], values);
+    const errors = required(['email', 'password'], values);
 
     if (!errors.email) {
       const emailError = email(values.email);
@@ -39,11 +37,16 @@ function SignUp() {
       <AppForm>
         <React.Fragment>
           <Typography variant="h3" gutterBottom marked="center" align="center">
-            Sign Up
+            Login
           </Typography>
           <Typography variant="body2" align="center">
-            <Link href="/premium-themes/onepirate/sign-in/" underline="always">
-              Already have an account?
+            {'Não é um membro ainda? '}
+            <Link
+              href="/cadastrar"
+              align="center"
+              underline="always"
+            >
+              Cadastre aqui
             </Link>
           </Typography>
         </React.Fragment>
@@ -54,33 +57,9 @@ function SignUp() {
         >
           {({ handleSubmit: handleSubmit2, submitting }) => (
             <Box component="form" onSubmit={handleSubmit2} noValidate sx={{ mt: 6 }}>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <Field
-                    autoFocus
-                    component={RFTextField}
-                    disabled={submitting || sent}
-                    autoComplete="given-name"
-                    fullWidth
-                    label="First name"
-                    name="firstName"
-                    required
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Field
-                    component={RFTextField}
-                    disabled={submitting || sent}
-                    autoComplete="family-name"
-                    fullWidth
-                    label="Last name"
-                    name="lastName"
-                    required
-                  />
-                </Grid>
-              </Grid>
               <Field
                 autoComplete="email"
+                autoFocus
                 component={RFTextField}
                 disabled={submitting || sent}
                 fullWidth
@@ -88,14 +67,16 @@ function SignUp() {
                 margin="normal"
                 name="email"
                 required
+                size="large"
               />
               <Field
                 fullWidth
+                size="large"
                 component={RFTextField}
                 disabled={submitting || sent}
                 required
                 name="password"
-                autoComplete="new-password"
+                autoComplete="current-password"
                 label="Password"
                 type="password"
                 margin="normal"
@@ -112,18 +93,23 @@ function SignUp() {
               <FormButton
                 sx={{ mt: 3, mb: 2 }}
                 disabled={submitting || sent}
+                size="large"
                 color="secondary"
                 fullWidth
               >
-                {submitting || sent ? 'In progress…' : 'Sign Up'}
+                {submitting || sent ? 'Carregando…' : 'Login'}
               </FormButton>
             </Box>
           )}
         </Form>
+        <Typography align="center">
+          <Link underline="always" href="password">
+            Esqueceu a senha?
+          </Link>
+        </Typography>
       </AppForm>
-      <AppFooter />
     </React.Fragment>
   );
 }
 
-export default withRoot(SignUp);
+export default SignIn;

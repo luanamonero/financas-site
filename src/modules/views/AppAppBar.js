@@ -55,7 +55,7 @@ function AppAppBar() {
           variant="h6"
           underline="none"
           color="inherit"
-          href="/premium-themes/onepirate/"
+          href="/"
           sx={{ fontSize: 24 }}
         >
           {"finanças uerj"}
@@ -85,7 +85,8 @@ function AppAppBar() {
             <Link
               variant="h6"
               underline="none"
-              href="/premium-themes/onepirate/sign-in/"
+              href="https://www.instagram.com/financasuerj"
+              target="_blank"
             >
               {"Instagram"}
             </Link>
@@ -113,7 +114,7 @@ function AppAppBar() {
           variant="h6"
           underline="none"
           color="inherit"
-          href="/premium-themes/onepirate/"
+          href="/"
           sx={{ fontSize: 24 }}
         >
           {"finanças uerj"}
@@ -123,7 +124,8 @@ function AppAppBar() {
             color="brand.red"
             variant="h6"
             underline="none"
-            href="/premium-themes/onepirate/sign-in/"
+            href="https://www.instagram.com/financasuerj"
+            target="_blank"
             sx={rightLink}
           >
             {"Instagram"}
