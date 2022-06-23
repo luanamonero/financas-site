@@ -103,7 +103,7 @@ const images = [
 
 export default function ProductCategories() {
   return (
-    <Container component="section" sx={{ mt: 8, mb: 4 }}>
+    <Container id="socio" component="section" sx={{ mt: 8, mb: 4 }}>
       <Typography variant="h4" marked="center" align="center" component="h2">
         Um amor que não se explica
       </Typography>
