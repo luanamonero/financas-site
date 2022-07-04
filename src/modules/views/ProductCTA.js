@@ -10,19 +10,59 @@ import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 
 function ProductCTA() {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("esportes");
+  const [email, setEmail] = React.useState("");
+  const [radio, setRadio] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [, setData] = React.useState();
+  const [disabled, setDisabled] = React.useState();
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const options = [
+    {
+      label: "Esportes",
+      value: "esportes",
+    },
+    {
+      label: "Torcida",
+      value: "torcida",
+    },
+    {
+      label: "Gestão",
+      value: "gestao",
+    },
+  ];
+
+  const phoneMask = (value) => {
+    return value
+      .replace(/\D+/g, "")
+      .replace(/(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{4})(\d)/, "$1-$2")
+      .replace(/(\d{4})-(\d)(\d{4})/, "$1$2-$3")
+      .replace(/(-\d{4})\d+?$/, "$1");
+  };
+
+  const handleChangeEmail = ({ target: { value } }) => {
+    setEmail(value);
+  };
+
+  const handleChangePhone = ({ target: { value } }) => {
+    setPhone(phoneMask(value));
+  };
+
+  const handleChangeRadio = (event) => {
+    setRadio(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setData([{ email, telefone: phone, interesse: radio }]);
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
+    setDisabled(false);
+    setPhone("");
+    setEmail("");
   };
 
   return (
@@ -50,45 +90,47 @@ function ProductCTA() {
                 Deixe seu telefone que entraremos em contato
               </Typography>
               <TextField
+                value={phone}
+                name="telefone"
                 noBorder
                 placeholder="(xx) xxxxx-xxxx"
                 variant="standard"
                 sx={{ width: "100%", mt: 3, mb: 2 }}
+                onChange={handleChangePhone}
               />
               <TextField
+                value={email}
+                name="email"
+                type="email"
                 noBorder
                 placeholder="email"
                 variant="standard"
                 sx={{ width: "100%", mt: 1, mb: 2 }}
+                onChange={handleChangeEmail}
               />
               <RadioGroup
-                name="row-radio"
+                name="area"
                 row
                 aria-labelledby="demo-row-radio-button-group-label"
-                value={value}
-                onChange={handleChange}
+                value={radio}
+                onChange={handleChangeRadio}
               >
-                <FormControlLabel
-                  value="esportes"
-                  control={<Radio />}
-                  label="Esportes"
-                />
-                <FormControlLabel
-                  value="torcida"
-                  control={<Radio />}
-                  label="Torcida"
-                />
-                <FormControlLabel
-                  value="gestao"
-                  control={<Radio />}
-                  label="Gestão"
-                />{" "}
+                {options.map((opt, i) => (
+                  <FormControlLabel
+                    key={i}
+                    value={opt.value}
+                    label={opt.label}
+                    control={<Radio />}
+                    checked={disabled}
+                  />
+                ))}
               </RadioGroup>
               <Button
                 type="submit"
                 color="primary"
                 variant="contained"
                 sx={{ width: "100%" }}
+                onClick={handleSubmit}
               >
                 Enviar
               </Button>

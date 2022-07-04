@@ -107,7 +107,7 @@ function ProductHowItWorks() {
           size="large"
           variant="contained"
           component="a"
-          href="https://www.umais.com.br/"
+          href="https://www.umais.site/siteAtletica/?q=180"
           target="_blank"
           sx={{ mt: 8 }}
         >
