@@ -8,6 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
+import { Link as RouterLink } from "react-router-dom";
 
 const rightLink = {
   fontSize: 16,
@@ -92,9 +93,11 @@ function AppAppBar() {
             </Link>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-            <Link variant="h6" underline="none" href="/lojinha">
-              {"Lojinha"}
-            </Link>
+            <RouterLink to="/lojinha">
+              <Link variant="h6" underline="none" href="/lojinha">
+                {"Lojinha"}
+              </Link>
+            </RouterLink>
           </MenuItem>
         </Menu>
       </Toolbar>
