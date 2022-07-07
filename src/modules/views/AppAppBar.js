@@ -93,7 +93,7 @@ function AppAppBar() {
             </Link>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-            <RouterLink to="/lojinha">
+            <RouterLink to="/lojinha" style={{ textDecoration: 'none' }}>
               <Link variant="h6" underline="none">
                 {"Lojinha"}
               </Link>
@@ -128,7 +128,7 @@ function AppAppBar() {
           >
             {"Instagram"}
           </Link>
-          <RouterLink to="/lojinha">
+          <RouterLink to="/lojinha" style={{ textDecoration: 'none' }}>
             <Link
               variant="h6"
               underline="none"
