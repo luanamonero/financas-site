@@ -92,11 +92,7 @@ function AppAppBar() {
             </Link>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/lojinha"
-            >
+            <Link variant="h6" underline="none" href="/lojinha">
               {"Lojinha"}
             </Link>
           </MenuItem>
