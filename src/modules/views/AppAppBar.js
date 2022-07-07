@@ -63,11 +63,11 @@ function AppAppBar() {
         <IconButton
           aria-label="more"
           id="long-button"
-          aria-controls={open ? 'long-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
+          aria-controls={open ? "long-menu" : undefined}
+          aria-expanded={open ? "true" : undefined}
           aria-haspopup="true"
           onClick={handleClick}
-          sx={{color: "brand.yellow"}}
+          sx={{ color: "brand.yellow" }}
         >
           <MenuIcon />
         </IconButton>
@@ -108,7 +108,7 @@ function AppAppBar() {
 
   function displayDesktop() {
     return (
-      <Toolbar sx={{ justifyContent: "space-between" }}>
+      <Toolbar sx={{ justifyContent: "space-around" }}>
         <Box sx={{ flex: 1 }} />
         <Link
           variant="h6"
@@ -133,8 +133,7 @@ function AppAppBar() {
           <Link
             variant="h6"
             underline="none"
-            href="https://www.cheersshop.com.br/atl%C3%A9tica-ime-uerj~387"
-            target="_blank"
+            href="/lojinha"
             sx={{ ...rightLink, color: "brand.yellow" }}
           >
             {"Lojinha"}

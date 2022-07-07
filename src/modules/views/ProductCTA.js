@@ -105,7 +105,7 @@ function ProductCTA() {
                 name="email"
                 type="email"
                 noBorder
-                placeholder="email"
+                placeholder="Email"
                 variant="standard"
                 sx={{ width: "100%", mt: 1, mb: 2 }}
                 onChange={handleChangeEmail}

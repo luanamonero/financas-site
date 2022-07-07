@@ -40,9 +40,7 @@ export default function ProductHero() {
       >
         saiba mais
       </Button>
-{/*       <Link variant="body2" color="inherit" sx={{ mt: 2 }} href="/cadastrar">
-        Ainda não tenho cadastro
-      </Link> */}
+
     </ProductHeroLayout>
   );
 }

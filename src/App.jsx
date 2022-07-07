@@ -3,9 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './modules/theme';
 import Home from './modules/pages/Home';
-import SignIn from './modules/pages/SignIn';
-import SignUp from './modules/pages/SignUp';
-import ForgotPassword from './modules/pages/ForgotPassword';
+import Shop from './modules/pages/Shop';
 
 function App() {
   return (
@@ -13,9 +11,7 @@ function App() {
       <BrowserRouter>
         <CssBaseline />
         <Routes>
-          <Route path="/login" element={<SignIn />} />
-          <Route path="/cadastrar" element={<SignUp />} />
-          <Route path="/password" element={<ForgotPassword />} />
+          <Route path="/lojinha" element={< Shop/>} />
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
