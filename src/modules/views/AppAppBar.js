@@ -95,8 +95,7 @@ function AppAppBar() {
             <Link
               variant="h6"
               underline="none"
-              href="https://www.cheersshop.com.br/atl%C3%A9tica-ime-uerj~387"
-              target="_blank"
+              href="/lojinha"
             >
               {"Lojinha"}
             </Link>
