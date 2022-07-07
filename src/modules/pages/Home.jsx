@@ -6,6 +6,7 @@ import ProductValues from '../views/ProductValues';
 import ProductHowItWorks from '../views/ProductHowItWorks';
 import ProductCTA from '../views/ProductCTA';
 import AppAppBar from '../views/AppAppBar';
+import AppFooter from '../views/AppFooter';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <ProductHowItWorks />
       <ProductCTA />
       <ProductSmokingHero />
+      <AppFooter/>
     </>
   );
 }
