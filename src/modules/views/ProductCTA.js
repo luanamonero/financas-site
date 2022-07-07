@@ -13,7 +13,6 @@ function ProductCTA() {
   const [email, setEmail] = React.useState("");
   const [radio, setRadio] = React.useState("");
   const [phone, setPhone] = React.useState("");
-  const [, setData] = React.useState();
   const [disabled, setDisabled] = React.useState();
 
   const options = [
@@ -52,9 +51,7 @@ function ProductCTA() {
     setRadio(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setData([{ email, telefone: phone, interesse: radio }]);
+  const handleSubmit = () => {
     setOpen(true);
   };
 
@@ -79,10 +76,14 @@ function ProductCTA() {
             }}
           >
             <Box
+              method="POST"
+              action="https://formsubmit.co/esportesfinancas.uerj@gmail.com"
               component="form"
               onSubmit={handleSubmit}
               sx={{ maxWidth: 450 }}
             >
+              <input type="hidden" name="_next" value="https://financasuerj.netlify.app/"/>
+              <input type="hidden" name="_captcha" value="false"></input>
               <Typography variant="h3" component="h3" gutterBottom>
                 Quer fazer parte da atlética?
               </Typography>
@@ -91,6 +92,7 @@ function ProductCTA() {
               </Typography>
               <TextField
                 value={phone}
+                type="text"
                 name="telefone"
                 noBorder
                 placeholder="(xx) xxxxx-xxxx"
@@ -109,6 +111,7 @@ function ProductCTA() {
                 onChange={handleChangeEmail}
               />
               <RadioGroup
+                type="text"
                 name="area"
                 row
                 aria-labelledby="demo-row-radio-button-group-label"
