@@ -4,8 +4,9 @@ import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import { AiFillInstagram } from "react-icons/ai";
+import { Link as RouterLink } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -34,7 +35,7 @@ export default function AppFooter() {
       component="footer"
       sx={{ display: "flex", bgcolor: "brand.red" }}
     >
-      <Container sx={{ my: 8, display: "flex"}}>
+      <Container sx={{ my: 8, display: "flex" }}>
         <Grid container spacing={12}>
           <Grid item xs={8} sm={4} md={3}>
             <Grid
@@ -45,15 +46,19 @@ export default function AppFooter() {
               sx={{ height: 120 }}
             >
               <Grid item sx={{ display: "flex" }}>
-                <Box component="a" href="https://www.instagram.com/financasuerj" sx={iconStyle}>
-                  <FacebookRoundedIcon sx={{ color: "brand.black"}}/>
+                <Box
+                  component="a"
+                  href="https://www.instagram.com/financasuerj"
+                  sx={iconStyle}
+                >
+                  <FacebookRoundedIcon sx={{ color: "brand.black" }} />
                 </Box>
                 <Box
                   component="a"
                   href="https://www.instagram.com/financasuerj"
                   sx={iconStyle}
                 >
-                  <AiFillInstagram color="black" size={25}/>
+                  <AiFillInstagram color="black" size={25} />
                 </Box>
               </Grid>
               <Grid item>
@@ -67,10 +72,16 @@ export default function AppFooter() {
             </Typography>
             <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link sx={{ color: "black"}} href="/premium-themes/onepirate/terms/">Lojinha</Link>
+                <RouterLink to="/lojinha" style={{ textDecoration: "none" }}>
+                  <Link variant="h6" underline="none">
+                    <Link sx={{ color: "black" }}>Lojinha</Link>
+                  </Link>
+                </RouterLink>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link sx={{ color: "black"}} href="/premium-themes/onepirate/privacy/">Home</Link>
+                <Link sx={{ color: "black" }} href="/">
+                  Home
+                </Link>
               </Box>
             </Box>
           </Grid>
