@@ -45,12 +45,12 @@ export default function AppFooter() {
               sx={{ height: 120 }}
             >
               <Grid item sx={{ display: "flex" }}>
-                <Box component="a" href="https://mui.com/" sx={iconStyle}>
+                <Box component="a" href="https://www.instagram.com/financasuerj" sx={iconStyle}>
                   <FacebookRoundedIcon sx={{ color: "brand.black"}}/>
                 </Box>
                 <Box
                   component="a"
-                  href="https://twitter.com/MUI_hq"
+                  href="https://www.instagram.com/financasuerj"
                   sx={iconStyle}
                 >
                   <AiFillInstagram color="black" size={25}/>
