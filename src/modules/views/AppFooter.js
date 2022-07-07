@@ -35,8 +35,8 @@ export default function AppFooter() {
       sx={{ display: "flex", bgcolor: "brand.red" }}
     >
       <Container sx={{ my: 8, display: "flex" }}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
+        <Grid container spacing={12}>
+          <Grid item xs={8} sm={4} md={3}>
             <Grid
               container
               direction="column"
