@@ -94,7 +94,7 @@ function AppAppBar() {
           </MenuItem>
           <MenuItem onClick={handleClose}>
             <RouterLink to="/lojinha">
-              <Link variant="h6" underline="none" href="/lojinha">
+              <Link variant="h6" underline="none">
                 {"Lojinha"}
               </Link>
             </RouterLink>
@@ -128,14 +128,15 @@ function AppAppBar() {
           >
             {"Instagram"}
           </Link>
-          <Link
-            variant="h6"
-            underline="none"
-            href="/lojinha"
-            sx={{ ...rightLink, color: "brand.yellow" }}
-          >
-            {"Lojinha"}
-          </Link>
+          <RouterLink to="/lojinha">
+            <Link
+              variant="h6"
+              underline="none"
+              sx={{ ...rightLink, color: "brand.yellow" }}
+            >
+              {"Lojinha"}
+            </Link>
+          </RouterLink>
         </Box>
       </Toolbar>
     );
