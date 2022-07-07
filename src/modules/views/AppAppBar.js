@@ -128,7 +128,7 @@ function AppAppBar() {
           <Link
             variant="h6"
             underline="none"
-            href="https://financasuerj.netlify.app/lojinha"
+            href="/lojinha"
             sx={{ ...rightLink, color: "brand.yellow" }}
           >
             {"Lojinha"}
