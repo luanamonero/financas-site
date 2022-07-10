@@ -30,6 +30,14 @@ const iconStyle = {
   },
 };
 
+const logoStyle = {
+  height: 150,
+  '@media screen (max-width: 789px)': {
+    height: '50%',
+    
+  },
+}
+
 export default function AppFooter() {
   return (
     <Typography
@@ -39,7 +47,7 @@ export default function AppFooter() {
       <Container sx={{ my: 4, display: "flex" }}>
         <Grid
           container
-          spacing={6}
+          spacing={2}
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
           <Grid item xs={8} sm={4} md={3}>
@@ -92,10 +100,8 @@ export default function AppFooter() {
           </Grid>
           <Grid item>
             <Box
+              sx={logoStyle}
               component="img"
-              sx={{
-                height: 150,
-              }}
               alt="Your logo."
               src={logo}
             />
