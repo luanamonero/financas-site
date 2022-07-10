@@ -55,13 +55,6 @@ function ProductCTA() {
     setOpen(true);
   };
 
-  const isNull = (email,phone, option) => {
-    if(email !== null &&  phone !== null && option !== null) {
-      return false;
-    }
-    return true;
-  }
-
   const handleClose = () => {
     setOpen(false);
     setChecked(false);
@@ -136,7 +129,6 @@ function ProductCTA() {
                 ))}
               </RadioGroup>
               <Button
-                disabled={isNull(email, phone, radio)}
                 variant="contained"
                 sx={{ width: "100%" }}
                 onClick={handleSubmit}
