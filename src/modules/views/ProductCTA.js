@@ -10,10 +10,10 @@ import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 
 function ProductCTA() {
   const [open, setOpen] = React.useState(false);
-  const [email, setEmail] = React.useState("");
-  const [radio, setRadio] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [disabled, setDisabled] = React.useState();
+  const [email, setEmail] = React.useState(null);
+  const [radio, setRadio] = React.useState(null);
+  const [phone, setPhone] = React.useState(null);
+  const [checked, setChecked] = React.useState();
 
   const options = [
     {
@@ -55,9 +55,16 @@ function ProductCTA() {
     setOpen(true);
   };
 
+  const isNull = (email,phone, option) => {
+    if(email !== null &&  phone !== null && option !== null) {
+      return false;
+    }
+    return true;
+  }
+
   const handleClose = () => {
     setOpen(false);
-    setDisabled(false);
+    setChecked(false);
     setPhone("");
     setEmail("");
   };
@@ -124,13 +131,12 @@ function ProductCTA() {
                     value={opt.value}
                     label={opt.label}
                     control={<Radio />}
-                    checked={disabled}
+                    checked={checked}
                   />
                 ))}
               </RadioGroup>
               <Button
-                type="submit"
-                color="primary"
+                disabled={isNull(email, phone, radio)}
                 variant="contained"
                 sx={{ width: "100%" }}
                 onClick={handleSubmit}

@@ -7,6 +7,7 @@ import Typography from "../components/Typography";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link as RouterLink } from "react-router-dom";
+import logo from "../assets/logoamarelo.png";
 
 function Copyright() {
   return (
@@ -35,8 +36,12 @@ export default function AppFooter() {
       component="footer"
       sx={{ display: "flex", bgcolor: "brand.red" }}
     >
-      <Container sx={{ my: 8, display: "flex" }}>
-        <Grid container spacing={12}>
+      <Container sx={{ my: 4, display: "flex" }}>
+        <Grid
+          container
+          spacing={6}
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
           <Grid item xs={8} sm={4} md={3}>
             <Grid
               container
@@ -73,8 +78,8 @@ export default function AppFooter() {
             <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
               <Box component="li" sx={{ py: 0.5 }}>
                 <RouterLink to="/lojinha" style={{ textDecoration: "none" }}>
-                  <Link variant="h6" underline="none">
-                    <Link sx={{ color: "black" }}>Lojinha</Link>
+                  <Link sx={{ color: "black" }} href="/">
+                    Lojinha
                   </Link>
                 </RouterLink>
               </Box>
@@ -84,6 +89,16 @@ export default function AppFooter() {
                 </Link>
               </Box>
             </Box>
+          </Grid>
+          <Grid item>
+            <Box
+              component="img"
+              sx={{
+                height: 150,
+              }}
+              alt="Your logo."
+              src={logo}
+            />
           </Grid>
         </Grid>
       </Container>
