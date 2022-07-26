@@ -55,13 +55,6 @@ function ProductCTA() {
     setOpen(true);
   };
 
-  const isNull = (email,phone, option) => {
-    if(email !== null &&  phone !== null && option !== null) {
-      return false;
-    }
-    return true;
-  }
-
   const handleClose = () => {
     setOpen(false);
     setChecked(false);
@@ -84,7 +77,7 @@ function ProductCTA() {
           >
             <Box
               method="POST"
-              action="https://formsubmit.co/esportesfinancas.uerj@gmail.com"
+              action="https://formsubmit.co/05792f75569be8fcd691756940ae90ec"
               component="form"
               onSubmit={handleSubmit}
               sx={{ maxWidth: 450 }}
@@ -136,7 +129,6 @@ function ProductCTA() {
                 ))}
               </RadioGroup>
               <Button
-                disabled={isNull(email, phone, radio)}
                 variant="contained"
                 sx={{ width: "100%" }}
                 onClick={handleSubmit}
