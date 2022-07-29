@@ -84,12 +84,12 @@ function ProductCTA() {
           >
             <Box
               method="POST"
-              action="https://formsubmit.co/esportesfinancas.uerj@gmail.com"
+              action="https://formsubmit.co/05792f75569be8fcd691756940ae90ec"
               component="form"
               onSubmit={handleSubmit}
               sx={{ maxWidth: 450 }}
             >
-              <input type="hidden" name="_next" value="https://financasuerj.netlify.app/"/>
+              <input type="hidden" name="_next" value="https://www.financasuerj.com.br/"/>
               <input type="hidden" name="_captcha" value="false"></input>
               <Typography variant="h3" component="h3" gutterBottom>
                 Quer fazer parte da atlética?
