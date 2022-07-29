@@ -124,6 +124,7 @@ function ProductCTA() {
                 ))}
               </RadioGroup>
               <Button
+                type="submit"
                 variant="contained"
                 sx={{ width: "100%" }}
                 onClick={handleSubmit}
