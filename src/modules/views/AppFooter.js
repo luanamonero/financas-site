@@ -61,14 +61,14 @@ export default function AppFooter() {
               <Grid item sx={{ display: "flex" }}>
                 <Box
                   component="a"
-                  href="https://www.instagram.com/financasuerj"
+                  href="https://www.instagram.com/atleticafinancasuerj"
                   sx={iconStyle}
                 >
                   <FacebookRoundedIcon sx={{ color: "brand.black" }} />
                 </Box>
                 <Box
                   component="a"
-                  href="https://www.instagram.com/financasuerj"
+                  href="https://www.instagram.com/atleticafinancasuerj"
                   sx={iconStyle}
                 >
                   <AiFillInstagram color="black" size={25} />

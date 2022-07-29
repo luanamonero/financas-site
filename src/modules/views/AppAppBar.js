@@ -86,7 +86,7 @@ function AppAppBar() {
             <Link
               variant="h6"
               underline="none"
-              href="https://www.instagram.com/financasuerj"
+              href="https://www.instagram.com/atleticafinancasuerj"
               target="_blank"
             >
               {"Instagram"}
@@ -122,7 +122,7 @@ function AppAppBar() {
             color="brand.red"
             variant="h6"
             underline="none"
-            href="https://www.instagram.com/financasuerj"
+            href="https://www.instagram.com/atleticafinancasuerj"
             target="_blank"
             sx={rightLink}
           >
