@@ -89,7 +89,7 @@ function ProductCTA() {
               onSubmit={handleSubmit}
               sx={{ maxWidth: 450 }}
             >
-              <input type="hidden" name="_next" value="https://financasuerj.netlify.app/"/>
+              <input type="hidden" name="_next" value="https://www.financasuerj.com.br/"/>
               <input type="hidden" name="_captcha" value="false"></input>
               <Typography variant="h3" component="h3" gutterBottom>
                 Quer fazer parte da atlética?
