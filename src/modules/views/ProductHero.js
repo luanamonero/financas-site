@@ -29,7 +29,7 @@ export default function ProductHero() {
         variant="h5"
         sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
       >
-        Qualquer frase bla bla bla
+        Forjados no fogo, ressurgidos das cinzas 🔥
       </Typography>
       <Button
         variant="contained"

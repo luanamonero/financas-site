@@ -92,7 +92,7 @@ const images = [
   },
   {
     url: "https://conteudo.imguol.com.br/c/esporte/bd/2021/06/16/equipe-da-noruega-no-campeonato-mundial-de-cheerleading-1623858213855_v2_900x506.jpg.webp",
-    title: "Cheers",
+    title: "Cheerleading",
     width: "20%",
   },
   {

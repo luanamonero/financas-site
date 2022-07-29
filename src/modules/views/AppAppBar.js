@@ -9,6 +9,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 import { Link as RouterLink } from "react-router-dom";
+import logo from "../assets/fenixamarela.png";
 
 const rightLink = {
   fontSize: 16,
@@ -93,7 +94,7 @@ function AppAppBar() {
             </Link>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-            <RouterLink to="/lojinha" style={{ textDecoration: 'none' }}>
+            <RouterLink to="/lojinha" style={{ textDecoration: "none" }}>
               <Link variant="h6" underline="none">
                 {"Lojinha"}
               </Link>
@@ -107,13 +108,16 @@ function AppAppBar() {
   function displayDesktop() {
     return (
       <Toolbar sx={{ justifyContent: "space-around" }}>
+        <Link href="/">
+          <img src={logo} alt="fenix logo" style={{ width: "80px"}} />
+        </Link>
         <Box sx={{ flex: 1 }} />
         <Link
           variant="h6"
           underline="none"
           color="inherit"
           href="/"
-          sx={{ fontSize: 24 }}
+          sx={{ fontSize: 24, marginRight: "100px" }}
         >
           {"finanças uerj"}
         </Link>
@@ -128,7 +132,7 @@ function AppAppBar() {
           >
             {"Instagram"}
           </Link>
-          <RouterLink to="/lojinha" style={{ textDecoration: 'none' }}>
+          <RouterLink to="/lojinha" style={{ textDecoration: "none" }}>
             <Link
               variant="h6"
               underline="none"

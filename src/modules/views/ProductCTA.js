@@ -13,7 +13,6 @@ function ProductCTA() {
   const [email, setEmail] = React.useState(null);
   const [radio, setRadio] = React.useState(null);
   const [phone, setPhone] = React.useState(null);
-
   const options = [
     {
       label: "Esportes",
@@ -28,6 +27,7 @@ function ProductCTA() {
       value: "gestao",
     },
   ];
+
 
   const phoneMask = (value) => {
     return value
@@ -124,9 +124,10 @@ function ProductCTA() {
                 ))}
               </RadioGroup>
               <Button
+                size="small"
                 type="submit"
                 variant="contained"
-                sx={{ width: "100%" }}
+                sx={{ width: "100%", height: "55px" }}
                 onClick={handleSubmit}
               >
                 Enviar

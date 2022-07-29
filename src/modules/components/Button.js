@@ -20,6 +20,10 @@ const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
   ...(size === 'small' && {
     padding: theme.spacing(1, 3),
     fontSize: theme.typography.pxToRem(13),
+    '&:hover': {
+      background: theme.palette.brand.black,
+      color: theme.palette.secondary.light
+    }
   }),
   ...(size === 'large' && {
     padding: theme.spacing(2, 5),
