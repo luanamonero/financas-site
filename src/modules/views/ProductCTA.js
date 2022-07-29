@@ -120,7 +120,6 @@ function ProductCTA() {
                     value={opt.value}
                     label={opt.label}
                     control={<Radio />}
-                    checked={checked}
                   />
                 ))}
               </RadioGroup>
