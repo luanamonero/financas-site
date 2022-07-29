@@ -13,7 +13,6 @@ function ProductCTA() {
   const [email, setEmail] = React.useState(null);
   const [radio, setRadio] = React.useState(null);
   const [phone, setPhone] = React.useState(null);
-  const [checked, setChecked] = React.useState();
 
   const options = [
     {
