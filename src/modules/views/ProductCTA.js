@@ -57,9 +57,6 @@ function ProductCTA() {
 
   const handleClose = () => {
     setOpen(false);
-    setChecked(false);
-    setPhone("");
-    setEmail("");
   };
 
   return (
