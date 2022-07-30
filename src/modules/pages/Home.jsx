@@ -17,7 +17,7 @@ function Home() {
       <ProductCategories />
       <ProductHowItWorks />
       <ProductCTA />
-      <ProductSmokingHero />
+      <ProductSmokingHero link="https://api.whatsapp.com/send?phone=5521998850424"/>
       <AppFooter/>
     </>
   );

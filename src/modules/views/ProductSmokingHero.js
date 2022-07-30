@@ -6,14 +6,13 @@ import Typography from '../components/Typography';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Link from '@mui/material/Link';
 
-
-function ProductSmokingHero() {
+function ProductSmokingHero({link}) {
   return (
     <Container
       component="section"
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 9 }}
     >
-      <Link href="https://api.whatsapp.com/send?phone=5521998850424" underline="none" target="_blank">
+      <Link href={link} underline="none" target="_blank">
         <Button
           sx={{
             border: '4px solid currentColor',

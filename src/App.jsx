@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <CssBaseline />
         <Routes>
-          <Route path="/" exact element={<Home />} />
           <Route path="/lojinha" element={< Shop/>} />
+          <Route path="/" exact element={<Home />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

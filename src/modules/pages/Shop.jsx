@@ -4,6 +4,7 @@ import AppAppBar from '../views/AppAppBar';
 import RecipeReviewCard from '../components/CardProduct';
 import Typography from "../components/Typography";
 import AppFooter from '../views/AppFooter';
+import ProductSmokingHero from '../views/ProductSmokingHero';
 
 
 function Shop() {
@@ -14,11 +15,10 @@ function Shop() {
         <Typography variant="h4" marked="center" align="center" component="h2">
           Lojinha da Fênix
         </Typography>
-        <Container sx={{ marginTop: 10 }}>          
-          <RecipeReviewCard />
-        </Container>
+        <RecipeReviewCard />
       </Container>
-      <AppFooter/>
+      <ProductSmokingHero link="https://api.whatsapp.com/send?phone=5521998850424" />
+      <AppFooter />
     </>
   );
 }

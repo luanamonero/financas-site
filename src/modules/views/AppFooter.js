@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import TwitterIcon from '@mui/icons-material/Twitter';
 import { AiFillInstagram } from "react-icons/ai";
 import { Link as RouterLink } from "react-router-dom";
 import logo from "../assets/logoamarelo.png";
@@ -56,7 +56,7 @@ export default function AppFooter() {
                   href="https://www.instagram.com/atleticafinancasuerj"
                   sx={iconStyle}
                 >
-                  <FacebookRoundedIcon sx={{ color: "brand.black" }} />
+                  <TwitterIcon sx={{ color: "brand.black" }} />
                 </Box>
                 <Box
                   component="a"

@@ -10,11 +10,61 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import logo from "../assets/fenixamarela.png";
-import kit from "../assets/kit.jpeg";
-import { useState } from "react";
+import kit from "../assets/kit.jpg";
+import camisa from "../assets/camisa.jpg";
+import caneca from "../assets/caneca.jpg";
+import tirante from "../assets/tirante.jpg";
+import uni1 from "../assets/uni1.png";
+import uni2 from "../assets/uni2.png";
+import uni3 from "../assets/uni3.png";
+import capa from "../assets/capa.png";
 
+import { Grid } from "@mui/material";
+
+const products = [
+  {
+    description:
+      "Kit Fênix",
+    image: kit,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+  },
+  {
+    description: "Camisa",
+    image: camisa,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+  },
+  {
+    description: "Caneca",
+    image: caneca,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+  },
+  {
+    description: "Tirante",
+    image: tirante,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+  },
+  {
+    description: "Uniformes da Fênix",
+    image: capa,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+  },
+  {
+    description: "uniforme 1",
+    image: uni1,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+  },
+  {
+    description: "uniforme 2",
+    image: uni2,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+  },
+  {
+    description: "uniforme basquete",
+    image: uni3,
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+  },
+];
 export default function RecipeReviewCard() {
-  const [color, setColor] = useState("");
 
   function dataAtualFormatada() {
     const data = new Date(),
@@ -24,47 +74,53 @@ export default function RecipeReviewCard() {
     return dia + "/" + mes + "/" + ano;
   }
 
-  const handleColor = () => {
-    setColor(color === "#b01923" ? "inherit" : "#b01923");
-  };
   const data = dataAtualFormatada();
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: "#b01923" }} aria-label="recipe">
-            <img src={logo} alt="logo" style={{ width: "50px" }} />
-          </Avatar>
-        }
-        title="atleticafinancasuerj"
-        subheader={data}
-      />
-      <CardMedia component="img" height="310" image={kit} alt="Paella dish" />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          A espera acabou! Ontem, no Fênix Day, apresentamos o nosso primeiro
-          kit de produtos, e a galera se empolgou. Composto por caneca, tirante
-          e camisa, ele chegou para enlouquecer e deixar todo mundo trajado...
-          Então corre pra garantir o seu. 🔥 Aproveita também pra se tornar
-          sócio e garantir aquele desconto nos seus produtos. 
-        </Typography>
-      </CardContent>
-      <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon onClick={handleColor} htmlColor={color} />
-        </IconButton>
-        <Button
-          variant="contained"
-          size="large"
-          target="_blank"
-          component="a"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
-          sx={{ width: "150px", height: "40px", borderRadius: "10px" }}
-        >
-          Encomendar
-        </Button>
-      </CardActions>
-    </Card>
+    <Grid  container>
+      {products.map(({ description, image, url }) => (
+        <Grid item xs={4} sx={{marginTop: 10}}>
+          <Card sx={{ maxWidth: 320 }}>
+            <CardHeader
+              avatar={
+                <Avatar sx={{ bgcolor: "#b01923" }} aria-label="recipe">
+                  <img src={logo} alt="logo" style={{ width: "50px" }} />
+                </Avatar>
+              }
+              title="atleticafinancasuerj"
+              subheader={data}
+            />
+            <CardMedia
+              component="img"
+              height="380"
+              image={image}
+              alt="Paella dish"
+            />
+            <CardContent>
+              <Typography variant="h6" color="#423636">
+                {description}
+              </Typography>
+            </CardContent>
+            <CardActions
+              sx={{ display: "flex", justifyContent: "space-between" }}
+            >
+              <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+              </IconButton>
+              <Button
+                variant="contained"
+                size="large"
+                target="_blank"
+                component="a"
+                href={url}
+                sx={{ width: "150px", height: "40px", borderRadius: "10px" }}
+              >
+                Encomendar
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
   );
 }
