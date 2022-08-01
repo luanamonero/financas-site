@@ -19,53 +19,52 @@ import uni2 from "../assets/uni2.png";
 import uni3 from "../assets/uni3.png";
 import capa from "../assets/capa.png";
 
-import { Grid } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 const products = [
   {
-    description:
-      "Kit Fênix",
+    description: "Kit Fênix",
     image: kit,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform",
   },
   {
     description: "Camisa",
     image: camisa,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform",
   },
   {
     description: "Caneca",
     image: caneca,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform",
   },
   {
     description: "Tirante",
     image: tirante,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSclBnTPx5ynQtIfO85YIzOWdjWR27Dediz_UvkYxWi2xRdSxA/viewform",
   },
   {
     description: "Uniformes da Fênix",
     image: capa,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform",
   },
   {
     description: "uniforme 1",
     image: uni1,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform",
   },
   {
     description: "uniforme 2",
     image: uni2,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform",
   },
   {
     description: "uniforme basquete",
     image: uni3,
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSf1QMOVVSIntMQbsXXk_Gxh716hSYIJFwbJCxz53ZNRIAuqhg/viewform",
   },
 ];
-export default function RecipeReviewCard() {
 
+export default function RecipeReviewCard() {
   function dataAtualFormatada() {
     const data = new Date(),
       dia = data.getDate().toString().padStart(2, "0"),
@@ -77,10 +76,10 @@ export default function RecipeReviewCard() {
   const data = dataAtualFormatada();
 
   return (
-    <Grid  container>
-      {products.map(({ description, image, url }) => (
-        <Grid item xs={4} sx={{marginTop: 10}}>
-          <Card sx={{ maxWidth: 320 }}>
+    <Container component="section" sx={{ mt: 8, mb: 4 }}>
+      <Box sx={{ mt: 8, display: "flex", flexWrap: "wrap" }}>
+        {products.map(({ description, image, url }) => (
+          <Card sx={{ width: 320, m: 2}} >
             <CardHeader
               avatar={
                 <Avatar sx={{ bgcolor: "#b01923" }} aria-label="recipe">
@@ -119,8 +118,8 @@ export default function RecipeReviewCard() {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
-      ))}
-    </Grid>
+        ))}
+      </Box>
+    </Container>
   );
 }
