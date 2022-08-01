@@ -18,7 +18,7 @@ import uni1 from "../assets/uni1.png";
 import uni2 from "../assets/uni2.png";
 import uni3 from "../assets/uni3.png";
 import capa from "../assets/capa.png";
-
+import { experimentalStyled as styled } from '@mui/material/styles';
 import { Box, Container } from "@mui/material";
 
 const products = [
@@ -64,6 +64,13 @@ const products = [
   },
 ];
 
+const ImageRoot = styled(CardMedia)(({ theme, size }) => ({
+  height: 380,
+  "@media (max-width: 768px)": {
+    height: 300
+  }
+}));
+
 export default function RecipeReviewCard() {
   function dataAtualFormatada() {
     const data = new Date(),
@@ -89,11 +96,9 @@ export default function RecipeReviewCard() {
               title="atleticafinancasuerj"
               subheader={data}
             />
-            <CardMedia
+            <ImageRoot
               component="img"
-              height="380"
               image={image}
-              alt="Paella dish"
             />
             <CardContent>
               <Typography variant="h6" color="#423636">

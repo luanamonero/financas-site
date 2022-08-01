@@ -13,6 +13,8 @@ function ProductCTA() {
   const [email, setEmail] = React.useState(null);
   const [radio, setRadio] = React.useState(null);
   const [phone, setPhone] = React.useState(null);
+  const [name, setName] = React.useState(null);
+
   const options = [
     {
       label: "Esportes",
@@ -36,6 +38,10 @@ function ProductCTA() {
       .replace(/(\d{4})(\d)/, "$1-$2")
       .replace(/(\d{4})-(\d)(\d{4})/, "$1$2-$3")
       .replace(/(-\d{4})\d+?$/, "$1");
+  };
+
+  const handleChangeName= ({ target: { value } }) => {
+    setName(value);
   };
 
   const handleChangeEmail = ({ target: { value } }) => {
@@ -87,13 +93,23 @@ function ProductCTA() {
                 Deixe seu telefone que entraremos em contato
               </Typography>
               <TextField
+                value={name}
+                type="text"
+                name="nome"
+                noBorder
+                placeholder="Nome"
+                variant="standard"
+                sx={{ width: "100%", mt: 3, mb: 2 }}
+                onChange={handleChangeName}
+              />
+              <TextField
                 value={phone}
                 type="text"
                 name="telefone"
                 noBorder
                 placeholder="(xx) xxxxx-xxxx"
                 variant="standard"
-                sx={{ width: "100%", mt: 3, mb: 2 }}
+                sx={{ width: "100%", mt: 1, mb: 2 }}
                 onChange={handleChangePhone}
               />
               <TextField
