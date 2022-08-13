@@ -39,11 +39,11 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+                  "São mais de 8 modalidades disponíveis para você praticar e competir."
                 }
 
                 {
-                  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                  "Tudo isso com profissionais qualificados e prontos pra ensinar!"
                 }
               </Typography>
             </Box>
@@ -61,11 +61,11 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+                  "De isoporzinho a grandes eventos nossa equipe não para de surpreender e trazer momentos memoráveis."
                 }
 
                 {
-                  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                  "Um experiência completa pra você curtir com a galera depois daquela semana difícil de estudos."
                 }
               </Typography>
             </Box>
@@ -83,11 +83,11 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+                  "Já pensou viajar com seus amigos para um evento com 4 dias de festas open bar e ainda torcer virado pros nossos atletas?"
                 }
 
                 {
-                  "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                  "Uma viagem por semestre e muitas, muitas histórias. Afinal o que acontece em Vassouras, fica em Vassouras."
                 }
               </Typography>
             </Box>
