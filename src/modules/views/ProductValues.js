@@ -39,7 +39,7 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  "São mais de 8 modalidades disponíveis para você praticar e competir."
+                  "São mais de 8 modalidades disponíveis para você praticar e competir. "
                 }
 
                 {
@@ -61,11 +61,11 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  "De isoporzinho a grandes eventos nossa equipe não para de surpreender e trazer momentos memoráveis."
+                  "De isoporzinho a grandes eventos nossa equipe não para de surpreender e trazer momentos memoráveis. "
                 }
 
                 {
-                  "Um experiência completa pra você curtir com a galera depois daquela semana difícil de estudos."
+                  "Uma experiência completa pra você curtir com a galera depois daquela semana difícil de estudos."
                 }
               </Typography>
             </Box>
@@ -83,7 +83,7 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  "Já pensou viajar com seus amigos para um evento com 4 dias de festas open bar e ainda torcer virado pros nossos atletas?"
+                  "Já pensou viajar com seus amigos para um evento com 4 dias de festas open bar e ainda torcer para os nossos atletas? "
                 }
 
                 {
