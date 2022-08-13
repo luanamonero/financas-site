@@ -114,12 +114,10 @@ export default function RecipeReviewCard() {
               <Button
                 variant="contained"
                 size="large"
-                target="_blank"
-                component="a"
-                href={url}
+                component="button"
                 sx={{ width: "150px", height: "40px", borderRadius: "10px" }}
               >
-                Encomendar
+                Esgotado
               </Button>
             </CardActions>
           </Card>
